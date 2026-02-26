@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SOLE STORE — Colección 2025</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">SOLE<span>STORE</span></div>
+    <ul class="nav__links">
+      <li><a href="#coleccion">Colección</a></li>
+      <li><a href="#destacados">Destacados</a></li>
+      <li><a href="#oferta">Oferta</a></li>
+    </ul>
+    <a href="#oferta" class="nav__cta">Ver precios →</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__noise"></div>
+    <div class="hero__lines">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero__inner">
+      <div class="hero__tag-wrap">
+        <span class="tag tag--gold">✦ Oferta Especial · Tiempo Limitado</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__title-line">Colección</span>
+        <span class="hero__title-line hero__title-line--italic">2025</span>
+        <span class="hero__title-line">Completa.</span>
+      </h1>
+      <p class="hero__sub">14 modelos exclusivos. Un solo precio de locura.<br/>No te quedés sin el tuyo — stock limitado.</p>
+      <div class="hero__actions">
+        <a href="#coleccion" class="btn btn--white">Ver la colección</a>
+        <a href="#oferta" class="btn btn--outline">Aprovechar oferta ↓</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><span class="stat__n">14</span><span class="stat__l">Modelos</span></div>
+        <div class="stat__div"></div>
+        <div class="stat"><span class="stat__n">40%</span><span class="stat__l">OFF hoy</span></div>
+        <div class="stat__div"></div>
+        <div class="stat"><span class="stat__n">24hs</span><span class="stat__l">Envío</span></div>
+        <div class="stat__div"></div>
+        <div class="stat"><span class="stat__n">5★</span><span class="stat__l">Calificación</span></div>
+      </div>
+    </div>
+    <div class="hero__strip">
+      <div class="hero__strip-track">
+        <img src="shoe01.png" alt=""/><img src="shoe02.png" alt=""/>
+        <img src="shoe03.png" alt=""/><img src="shoe04.png" alt=""/>
+        <img src="shoe05.png" alt=""/><img src="shoe06.png" alt=""/>
+        <img src="shoe07.png" alt=""/><img src="shoe08.png" alt=""/>
+        <img src="shoe01.png" alt=""/><img src="shoe02.png" alt=""/>
+        <img src="shoe03.png" alt=""/><img src="shoe04.png" alt=""/>
+        <img src="shoe05.png" alt=""/><img src="shoe06.png" alt=""/>
+        <img src="shoe07.png" alt=""/><img src="shoe08.png" alt=""/>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <div class="promo-banner">
+    <div class="promo-track">
+      <span>🔥 40% OFF EN TODA LA COLECCIÓN</span><span>·</span>
+      <span>📦 ENVÍO GRATIS A TODO EL PAÍS</span><span>·</span>
+      <span>⚡ STOCK LIMITADO</span><span>·</span>
+      <span>🔄 30 DÍAS DE DEVOLUCIÓN</span><span>·</span>
+      <span>🔥 40% OFF EN TODA LA COLECCIÓN</span><span>·</span>
+      <span>📦 ENVÍO GRATIS A TODO EL PAÍS</span><span>·</span>
+      <span>⚡ STOCK LIMITADO</span><span>·</span>
+      <span>🔄 30 DÍAS DE DEVOLUCIÓN</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- COLECCION GRID -->
+  <section class="coleccion" id="coleccion">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Colección Completa 2025</span>
+        <h2 class="section-title">14 modelos.<br/><em>Una sola oportunidad.</em></h2>
+        <p class="section-sub">Cada par diseñado para destacar. Elegí el tuyo antes de que se agote.</p>
+      </div>
+      <div class="grid" id="shoeGrid">
+
+        <div class="shoe-card shoe-card--large" data-reveal data-delay="0">
+          <div class="shoe-card__badge">MÁS VENDIDO</div>
+          <div class="shoe-card__img-wrap"><img src="shoe01.png" alt="Arena Classic" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Arena Classic</span><span class="shoe-card__cat">Low · Casual</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$119.990</span><span class="shoe-card__price">$71.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(1)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="80">
+          <div class="shoe-card__badge shoe-card__badge--red">NUEVO</div>
+          <div class="shoe-card__img-wrap"><img src="shoe02.png" alt="Auto Max Infrared" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Auto Max Infrared</span><span class="shoe-card__cat">Tech · Running</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$149.990</span><span class="shoe-card__price">$89.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(2)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="160">
+          <div class="shoe-card__img-wrap"><img src="shoe03.png" alt="DT Max Black Gold" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">DT Max Black Gold</span><span class="shoe-card__cat">High · Basketball</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$139.990</span><span class="shoe-card__price">$83.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(3)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="240">
+          <div class="shoe-card__img-wrap"><img src="shoe04.png" alt="Wheat Coffee Low" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Wheat Coffee Low</span><span class="shoe-card__cat">Low · Lifestyle</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$129.990</span><span class="shoe-card__price">$77.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(4)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="320">
+          <div class="shoe-card__img-wrap"><img src="shoe05.png" alt="Noir Rose Low" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Noir Rose Low</span><span class="shoe-card__cat">Low · Premium</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$134.990</span><span class="shoe-card__price">$80.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(5)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card shoe-card--large" data-reveal data-delay="400">
+          <div class="shoe-card__badge">ED. LIMITADA</div>
+          <div class="shoe-card__img-wrap"><img src="shoe06.png" alt="Olive Fire Low" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Olive Fire Low</span><span class="shoe-card__cat">Low · Collab</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$154.990</span><span class="shoe-card__price">$92.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(6)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="80">
+          <div class="shoe-card__img-wrap"><img src="shoe07.png" alt="Dark Mocha Low" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Dark Mocha Low</span><span class="shoe-card__cat">Low · Luxury</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$144.990</span><span class="shoe-card__price">$86.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(7)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="160">
+          <div class="shoe-card__img-wrap"><img src="shoe08.png" alt="Black Gum Low" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Black Gum Low</span><span class="shoe-card__cat">Low · Street</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$124.990</span><span class="shoe-card__price">$74.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(8)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="240">
+          <div class="shoe-card__img-wrap"><img src="shoe09.png" alt="Cream Luxe Low" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Cream Luxe Low</span><span class="shoe-card__cat">Low · Premium</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$139.990</span><span class="shoe-card__price">$83.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(9)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="320">
+          <div class="shoe-card__badge shoe-card__badge--blue">COLLAB</div>
+          <div class="shoe-card__img-wrap"><img src="shoe10.png" alt="UNDFTD Ocean Low" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">UNDFTD Ocean Low</span><span class="shoe-card__cat">Low · Collab</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$169.990</span><span class="shoe-card__price">$101.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(10)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card shoe-card--large" data-reveal data-delay="400">
+          <div class="shoe-card__badge">CLÁSICO</div>
+          <div class="shoe-card__img-wrap"><img src="shoe11.png" alt="Wheat Flax Low" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Wheat Flax Low</span><span class="shoe-card__cat">Low · Lifestyle</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$129.990</span><span class="shoe-card__price">$77.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(11)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="80">
+          <div class="shoe-card__img-wrap"><img src="shoe12.png" alt="Pixel Black Low" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Pixel Black Low</span><span class="shoe-card__cat">Low · Femenino</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$134.990</span><span class="shoe-card__price">$80.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(12)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="160">
+          <div class="shoe-card__badge shoe-card__badge--red">NUEVO</div>
+          <div class="shoe-card__img-wrap"><img src="shoe13.png" alt="Jordan 1 High Spark" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Jordan 1 High Spark</span><span class="shoe-card__cat">High · Basketball</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$179.990</span><span class="shoe-card__price">$107.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(13)">Ver modelo →</button>
+        </div>
+
+        <div class="shoe-card" data-reveal data-delay="240">
+          <div class="shoe-card__badge shoe-card__badge--red">MÁS PEDIDO</div>
+          <div class="shoe-card__img-wrap"><img src="shoe14.png" alt="Jordan 1 Low Elevated" loading="lazy"/></div>
+          <div class="shoe-card__info">
+            <div class="shoe-card__meta"><span class="shoe-card__name">Jordan 1 Low Elevated</span><span class="shoe-card__cat">Low · Femenino</span></div>
+            <div class="shoe-card__price-wrap"><span class="shoe-card__old">$159.990</span><span class="shoe-card__price">$95.994</span></div>
+          </div>
+          <button class="shoe-card__btn" onclick="openModal(14)">Ver modelo →</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTACADOS -->
+  <section class="destacados" id="destacados">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">Favoritos de la semana</span>
+        <h2 class="section-title">Los más <em>elegidos.</em></h2>
+      </div>
+      <div class="destacados__grid">
+        <div class="dest-card" data-reveal>
+          <img src="shoe13.png" alt="Jordan 1 High Spark"/>
+          <div class="dest-card__info">
+            <h3>Jordan 1 High Spark</h3>
+            <p>El clásico que nunca falla. Cuero premium con detalles en plata y rojo.</p>
+            <span class="dest-price">$107.994 <small>antes $179.990</small></span>
+          </div>
+        </div>
+        <div class="dest-card dest-card--center" data-reveal>
+          <img src="shoe02.png" alt="Auto Max Infrared"/>
+          <div class="dest-card__info">
+            <h3>Auto Max Infrared</h3>
+            <p>Tecnología de próxima generación. Suela de aire visible. El futuro en tus pies.</p>
+            <span class="dest-price">$89.994 <small>antes $149.990</small></span>
+          </div>
+        </div>
+        <div class="dest-card" data-reveal>
+          <img src="shoe06.png" alt="Olive Fire Low"/>
+          <div class="dest-card__info">
+            <h3>Olive Fire Low</h3>
+            <p>Edición limitada. Verde oliva barnizado con contraste naranja. Para coleccionistas.</p>
+            <span class="dest-price">$92.994 <small>antes $154.990</small></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA CTA -->
+  <section class="oferta" id="oferta">
+    <div class="oferta__bg"></div>
+    <div class="container">
+      <div class="oferta__inner">
+        <div class="oferta__copy">
+          <span class="tag tag--gold">⏰ Oferta termina pronto</span>
+          <h2 class="oferta__title">40% OFF<br/><em>en toda la colección.</em></h2>
+          <p class="oferta__sub">14 modelos. Todos con descuento. Envío gratis en CABA y GBA. Pagás en hasta 12 cuotas sin interés.</p>
+          <div class="countdown" id="countdown">
+            <div class="cd-box"><span id="cd-h">08</span><small>hs</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-box"><span id="cd-m">45</span><small>min</small></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-box"><span id="cd-s">00</span><small>seg</small></div>
+          </div>
+          <p class="oferta__urgency">🔴 Solo quedan <strong id="stockNum">37</strong> pares disponibles</p>
+        </div>
+        <div class="oferta__card">
+          <div class="oferta__card-header">
+            <span>Colección Completa 2025</span>
+            <span class="badge-40">40% OFF</span>
+          </div>
+          <ul class="oferta__perks">
+            <li>✓ 14 modelos disponibles</li>
+            <li>✓ Talles 35 al 46</li>
+            <li>✓ Envío en 24 horas</li>
+            <li>✓ 30 días de devolución gratis</li>
+            <li>✓ Garantía oficial 1 año</li>
+            <li>✓ Pago en 12 cuotas sin interés</li>
+          </ul>
+          <div class="oferta__price-block">
+            <span class="oferta__label">Precio especial desde</span>
+            <span class="oferta__price">$71.994</span>
+            <span class="oferta__save">Ahorrás hasta $68.000</span>
+          </div>
+          <a href="#coleccion" class="btn btn--gold btn--full">🛒 Elegir mi modelo ahora</a>
+          <p class="oferta__fine">Precio final. Incluye IVA. Stock sujeto a disponibilidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios">
+    <div class="container">
+      <div class="section-head">
+        <span class="tag">+8.000 clientes felices</span>
+        <h2 class="section-title">Lo que dicen <em>ellos.</em></h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi" data-reveal>
+          <div class="testi__stars">★★★★★</div>
+          <p>"Me llegaron en menos de 24 horas y la caja estaba impecable. Las Olive Fire son una obra de arte, literalmente."</p>
+          <div class="testi__author"><div class="testi__av" style="background:#8B9E6A">CM</div><div><strong>Camila M.</strong><small>Palermo, CABA</small></div></div>
+        </div>
+        <div class="testi testi--feat" data-reveal>
+          <div class="testi__stars">★★★★★</div>
+          <p>"Compré las Jordan 1 High y no puedo creer la calidad. Busqué en todos lados y acá tenían el mejor precio por lejos. Las recomiendo 100%."</p>
+          <div class="testi__author"><div class="testi__av" style="background:#4A7BA7">FR</div><div><strong>Federico R.</strong><small>Córdoba Capital</small></div></div>
+        </div>
+        <div class="testi" data-reveal>
+          <div class="testi__stars">★★★★★</div>
+          <p>"Segunda compra en el mes. Las Auto Max Infrared son una locura tecnológica. Mis amigos me preguntan dónde las compré todo el tiempo."</p>
+          <div class="testi__author"><div class="testi__av" style="background:#C4713A">LS</div><div><strong>Luciana S.</strong><small>Rosario, Santa Fe</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="nav__logo">SOLE<span>STORE</span></div>
+          <p>Las mejores zapatillas.<br/>El mejor precio.</p>
+        </div>
+        <div class="footer__cols">
+          <div><h4>Tienda</h4><a href="#">Colección 2025</a><a href="#">Novedades</a><a href="#">Ofertas</a></div>
+          <div><h4>Ayuda</h4><a href="#">Cómo comprar</a><a href="#">Envíos</a><a href="#">Devoluciones</a></div>
+          <div><h4>Contacto</h4><a href="#">WhatsApp</a><a href="#">Instagram</a><a href="#">Email</a></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 SOLE STORE. Todos los derechos reservados.</span>
+        <span>Precios en pesos argentinos. Stock sujeto a disponibilidad.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+    <div class="modal" id="modal" onclick="event.stopPropagation()">
+      <button class="modal__close" onclick="closeModal()">✕</button>
+      <div class="modal__img"><img id="modalImg" src="" alt=""/></div>
+      <div class="modal__info">
+        <span class="modal__cat" id="modalCat"></span>
+        <h3 class="modal__name" id="modalName"></h3>
+        <div class="modal__prices">
+          <span class="modal__old" id="modalOld"></span>
+          <span class="modal__price" id="modalPrice"></span>
+        </div>
+        <div class="modal__sizes">
+          <p>Seleccioná tu talle:</p>
+          <div class="modal__size-grid" id="modalSizeGrid"></div>
+        </div>
+        <button class="btn btn--gold btn--full modal__buy" id="modalBuy">🛒 Agregar al carrito</button>
+        <div class="modal__guarantees"><span>🚚 Envío 24hs</span><span>🔄 30 días devolución</span><span>🔒 Pago seguro</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOTIF -->
+  <div class="notif" id="notif">
+    <span class="notif__icon">👟</span>
+    <div><strong id="notifCity">Alguien de Córdoba</strong><br/><small id="notifText">compró Jordan 1 High Spark</small></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
