@@ -1,70 +1,19 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
-<style id="hide-style">body { visibility: hidden; }</style>
-
 <script>
 (function() {
-  const LOJA_DESTINO = "https://vr0k4b-ya.myshopify.com";
-
-  const params = new URLSearchParams(window.location.search);
-  const cart = params.get("cart");
-
-  if (cart) {
-    // Busca os SKUs na loja de DESTINO para converter para os Variant IDs corretos
-    fetch(`${LOJA_DESTINO}/products.json?limit=250`)
-      .then(r => r.json())
-      .then(data => {
-        // Monta mapa SKU -> Variant ID da loja de destino
-        const skuMapDestino = {};
-        for (const product of data.products) {
-          for (const variant of product.variants) {
-            if (variant.sku) skuMapDestino[variant.sku] = variant.id;
-          }
-        }
-
-        // Decodifica o cart recebido (vem como VariantID_origem:QTY)
-        // Mas precisamos buscar os SKUs da loja origem para cruzar
-        fetch("https://pxpv5j-qy.myshopify.com/products.json?limit=250")
-          .then(r => r.json())
-          .then(dataOrigem => {
-            const idToSku = {};
-            for (const product of dataOrigem.products) {
-              for (const variant of product.variants) {
-                if (variant.sku) idToSku[variant.id] = variant.sku;
-              }
-            }
-
-            const cartParts = decodeURIComponent(cart).split(",");
-            const novoCart = [];
-
-            for (const part of cartParts) {
-              const [variantIdOrigem, qty] = part.split(":");
-              const sku = idToSku[variantIdOrigem];
-              if (!sku) continue;
-              const variantIdDestino = skuMapDestino[sku];
-              if (!variantIdDestino) continue;
-              novoCart.push(`${variantIdDestino}:${qty}`);
-            }
-
-            if (novoCart.length === 0) {
-              console.warn("Nenhum produto encontrado na loja de destino.");
-              document.getElementById("hide-style").remove();
-              return;
-            }
-
-            window.location.replace(`${LOJA_DESTINO}/cart/${novoCart.join(",")}`);
-          });
-      })
-      .catch(err => {
-        console.error("Erro ao carregar produtos:", err);
+    const params = new URLSearchParams(window.location.search);
+    const cart = params.get("cart");
+    if (cart) {
+        window.location.replace("https://vr0k4b-ya.myshopify.com/cart/" + cart);
+    } else {
         document.getElementById("hide-style").remove();
-      });
-  } else {
-    document.getElementById("hide-style").remove();
-  }
+    }
 })();
 </script>
+
+
   
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
