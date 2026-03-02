@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
-  <script>
+<!-- Esconde o conteúdo até confirmar que não é redirecionamento -->
+<style id="hide-style">body { visibility: hidden; }</style>
+
+<script>
 (function() {
-    const params = new URLSearchParams(window.location.search);
-    const cart = params.get("cart");
-    if (cart) {
-        window.location.replace("https://vr0k4b-ya.myshopify.com/cart/" + cart); 
+  const params = new URLSearchParams(window.location.search);
+  const cart = params.get("cart");
+
+  if (cart) {
+    // Valida formato básico antes de redirecionar (ex: 123456:1,789012:2)
+    const valido = /^[\d:,]+$/.test(cart);
+    if (valido) {
+      window.location.replace("https://vr0k4b-ya.myshopify.com/cart/" + cart);
     } else {
-        document.getElementById("hide-style").remove();
+      console.warn("Parâmetro cart inválido:", cart);
+      document.getElementById("hide-style").remove();
     }
+  } else {
+    // Sem parâmetro de carrinho — exibe a página normalmente
+    document.getElementById("hide-style").remove();
+  }
 })();
 </script>
   
