@@ -3,13 +3,17 @@
 <head>
 <script>
 (function() {
-    const params = new URLSearchParams(window.location.search);
-    const cart = params.get("cart");
-    if (cart) {
-        window.location.replace("https://vr0k4b-ya.myshopify.com/cart/" + cart);
-    } else {
-        document.getElementById("hide-style").remove();
-    }
+  var params = new URLSearchParams(window.location.search);
+  var cart = params.get("cart");
+
+  if (cart) {
+    window.location.replace(
+      "https://qqt8mr-jy.myshopify.com/cart/" + cart
+    );
+  } else {
+    var hideStyle = document.getElementById("hide-style");
+    if (hideStyle) hideStyle.remove();
+  }
 })();
 </script>
 
