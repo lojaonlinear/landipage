@@ -1,28 +1,17 @@
 <!DOCTYPE html>
 <html lang="es-AR">
 <head>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Redirecionando...</title>
-  <script>
-  (function() {
-    var params = new URLSearchParams(window.location.search);
-    var cart = params.get("cart");
+<script>
+(function() {
+    const params = new URLSearchParams(window.location.search);
+    const cart = params.get("cart");
     if (cart) {
-      window.location.replace(
-        "https://catlifeoficial.store/cart/" + cart
-      );
+        window.location.replace("https://qqt8mr-jy.myshopify.com/cart/" + cart);
     } else {
-      var hideStyle = document.getElementById("hide-style");
-      if (hideStyle) hideStyle.remove();
+        document.getElementById("hide-style").remove();
     }
-  })();
-  </script>
-</head>
-<body></body>
-</html>
+})();
+</script>
 
 
   
